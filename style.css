@@ -1,0 +1,196 @@
+/* Botanical plant theme */
+:root {
+  --forest: #285943;
+  --deep-green: #183d2b;
+  --leaf: #71966b;
+  --sage: #b9cbb0;
+  --light-sage: #e4ecdc;
+  --cream: #fbf8ed;
+  --soil: #b38b61;
+  --white: #fffef9;
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+/* Map-first layout: only the map is visible on initial page load. */
+.screen[hidden] { display: none !important; }
+.screen:not([hidden]) { display: block; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 24px 16px 36px;
+  background: var(--cream);
+  color: var(--deep-green);
+  font: 17px/1.65 "Trebuchet MS", Arial, sans-serif;
+}
+
+.site-header, main, footer {
+  width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 30px 20px;
+  text-align: center;
+  background: var(--forest);
+  color: var(--white);
+  border-radius: 24px;
+  border-bottom: 7px solid var(--leaf);
+}
+
+.site-header h1 {
+  margin: 0;
+  font: bold clamp(2rem, 5vw, 3.4rem)/1.2 Georgia, serif;
+}
+
+.site-header p { margin: 10px 0 0; }
+.site-header .eyebrow { color: #dcebd4; }
+
+.eyebrow {
+  color: var(--leaf);
+  font-size: .78rem;
+  font-weight: bold;
+  letter-spacing: .13em;
+}
+
+.screen {
+  margin: 26px auto;
+  padding: clamp(18px, 4vw, 34px);
+  background: var(--white);
+  border: 2px solid var(--sage);
+  border-radius: 24px;
+  box-shadow: 0 8px 24px #28594312;
+}
+
+.screen h2 {
+  margin-top: 0;
+  color: var(--forest);
+  font: bold clamp(1.6rem, 4vw, 2.2rem)/1.2 Georgia, serif;
+}
+
+.intro, .map-note { text-align: justified; }
+
+.journey-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 20px auto 8px;
+  border: 3px solid var(--sage);
+  border-radius: 20px;
+  background: #dcebd4;
+}
+
+.map-marker { cursor: pointer; }
+.map-marker circle {
+  fill: var(--forest);
+  stroke: var(--white);
+  stroke-width: 5;
+  transition: fill .2s, r .2s;
+}
+.map-marker text {
+  fill: white;
+  font: bold 24px Arial, sans-serif;
+  text-anchor: middle;
+  pointer-events: none;
+}
+.map-marker:hover circle, .map-marker:focus circle { fill: var(--leaf); }
+.map-marker:focus { outline: none; }
+.map-marker:focus circle { stroke: #e7c98d; stroke-width: 8; }
+.final-marker circle { fill: #8c6b42; }
+
+.quiz {
+  padding: 20px;
+  background: var(--light-sage);
+  border-radius: 16px;
+}
+.quiz h3 { margin-top: 0; color: var(--forest); }
+.question-text { font-size: 1.1rem; font-weight: bold; }
+
+.answer-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+.answer-button {
+  padding: 12px 15px;
+  text-align: left;
+  color: var(--deep-green);
+  background: var(--white);
+  border: 2px solid var(--sage);
+  border-radius: 12px;
+}
+.answer-button:hover, .answer-button:focus-visible {
+  border-color: var(--forest);
+  background: #f4f8ef;
+}
+.answer-button:disabled { cursor: default; opacity: .7; }
+
+.feedback { min-height: 1.5em; margin-bottom: 0; font-weight: bold; }
+.feedback.correct { color: #24643c; }
+.feedback.incorrect { color: #9a492e; }
+
+.reveal-content { margin-top: 24px; text-align: center; }
+.reveal-content img, .reveal-content video {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  max-height: 65vh;
+  object-fit: contain;
+  margin: 18px auto;
+  border: 5px solid var(--light-sage);
+  border-radius: 18px;
+  background: var(--deep-green);
+}
+.caption {
+  font: 1rem/1.8 Georgia, serif;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 0 12px;
+  color: var(--deep-green);
+}
+
+.back-button, .next-button, .boom-button {
+  padding: 11px 17px;
+  border: 0;
+  border-radius: 999px;
+  font-weight: bold;
+}
+.back-button {
+  margin-bottom: 20px;
+  color: var(--forest);
+  background: var(--light-sage);
+}
+.next-button, .boom-button {
+  color: white;
+  background: var(--forest);
+}
+.next-button:hover, .boom-button:hover { background: var(--leaf); }
+.boom-button { font-size: 1.2rem; padding: 15px 24px; }
+.final-level { text-align: center; }
+
+footer {
+  margin-top: 26px;
+  padding: 20px;
+  text-align: center;
+  color: var(--forest);
+  background: var(--light-sage);
+  border-radius: 18px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 12px 8px 24px; font-size: 16px; }
+  .site-header { padding: 24px 14px; }
+  .screen { padding: 16px; border-radius: 18px; }
+  .quiz { padding: 14px; }
+  .journey-map { border-radius: 12px; }
+}

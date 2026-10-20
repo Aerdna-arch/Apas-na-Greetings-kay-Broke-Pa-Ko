@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Year of Growing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">A LITTLE BIRTHDAY BLOOM 🌷</p>
+    <h1>A Year of Growing</h1>
+    <p>Choose a level on the map and follow the path.</p>
+  </header>
+
+  <main>
+    <!-- The map is the only section visible when the page first opens. -->
+    <section id="map-screen" class="screen map-screen" aria-labelledby="map-heading">
+      <h2 id="map-heading">Your Journey Map</h2>
+      <p class="intro">Click a level to begin. Answer correctly to reveal each memory.</p>
+
+      <svg class="journey-map" viewBox="0 0 900 430" role="img" aria-labelledby="map-title map-desc">
+        <title id="map-title">Seven-level garden journey map</title>
+        <desc id="map-desc">A winding garden path with seven clickable level markers.</desc>
+        <rect x="0" y="0" width="900" height="430" rx="24" fill="#dcebd4"/>
+        <ellipse cx="430" cy="90" rx="85" ry="28" fill="#c2dcb6"/>
+        <ellipse cx="760" cy="340" rx="75" ry="24" fill="#c2dcb6"/>
+        <path d="M 65 315 C 105 370, 210 365, 235 300 S 150 225, 155 165 S 265 65, 325 120 S 360 240, 435 250 S 560 280, 590 210 S 540 95, 625 75 S 735 105, 720 175 S 770 270, 830 235"
+              fill="none" stroke="#b38b61" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 65 315 C 105 370, 210 365, 235 300 S 150 225, 155 165 S 265 65, 325 120 S 360 240, 435 250 S 560 280, 590 210 S 540 95, 625 75 S 735 105, 720 175 S 770 270, 830 235"
+              fill="none" stroke="#e8d3ae" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 13"/>
+        <g fill="#71966b" opacity=".9">
+          <ellipse cx="90" cy="100" rx="24" ry="11" transform="rotate(-35 90 100)"/>
+          <ellipse cx="115" cy="85" rx="24" ry="11" transform="rotate(35 115 85)"/>
+          <ellipse cx="490" cy="350" rx="25" ry="12" transform="rotate(-25 490 350)"/>
+          <ellipse cx="515" cy="335" rx="25" ry="12" transform="rotate(35 515 335)"/>
+          <ellipse cx="780" cy="95" rx="25" ry="12" transform="rotate(-25 780 95)"/>
+          <ellipse cx="804" cy="80" rx="25" ry="12" transform="rotate(35 804 80)"/>
+        </g>
+
+        <a href="#level-1" class="map-marker" data-level="1" aria-label="Open Level 1">
+          <circle cx="75" cy="315" r="27"/><text x="75" y="323">1</text>
+        </a>
+        <a href="#level-2" class="map-marker" data-level="2" aria-label="Open Level 2">
+          <circle cx="220" cy="315" r="27"/><text x="220" y="323">2</text>
+        </a>
+        <a href="#level-3" class="map-marker" data-level="3" aria-label="Open Level 3">
+          <circle cx="165" cy="180" r="27"/><text x="165" y="188">3</text>
+        </a>
+        <a href="#level-4" class="map-marker" data-level="4" aria-label="Open Level 4">
+          <circle cx="255" cy="95" r="27"/><text x="255" y="103">4</text>
+        </a>
+        <a href="#level-5" class="map-marker" data-level="5" aria-label="Open Level 5">
+          <circle cx="355" cy="140" r="27"/><text x="355" y="148">5</text>
+        </a>
+        <a href="#level-6" class="map-marker" data-level="6" aria-label="Open Level 6">
+          <circle cx="465" cy="253" r="27"/><text x="465" y="261">6</text>
+        </a>
+        <a href="#level-7" class="map-marker final-marker" data-level="7" aria-label="Open Level 7">
+          <circle cx="830" cy="235" r="30"/><text x="830" y="243">7</text>
+        </a>
+      </svg>
+      <p class="map-note">🌱 Every path begins with one little step.</p>
+    </section>
+
+    <!-- Level content stays hidden until a map marker is clicked. -->
+    <section id="level-1" class="screen level-screen" data-level-screen="1" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">LEVEL 1 OF 7</p>
+      <h2>Level 1</h2>
+      <div class="quiz">
+        <h3>The Beginning</h3>
+        <h4>Every journey starts somewhere. Answer this question to reveal the first memory.</h4>
+        <p class="question-text">Which word best describes a great beginning?</p>
+        <div class="answer-list">
+          <button class="answer-button" type="button" data-answer="A">A. Curiosity</button>
+          <button class="answer-button" type="button" data-answer="B">B. Giving up</button>
+          <button class="answer-button" type="button" data-answer="C">C. Standing still</button>
+          <button class="answer-button" type="button" data-answer="D">D. Forgetting</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="reveal-content" hidden>
+        <img src="picture/1.jpg" alt="1 picture">
+        <p class="caption">Hi, Nikki ghurl! 💗</p>
+        <p class="caption">We first met at school as colleagues, and you were someone nga grabe ka naning sa tanan nimong buhaton. Day 1 pa lang sa work, nagtuon na dayon ka sa books😭. Even when we told you, “iz gwenchana,” you’d still study on your own. HAHAHA. But I’m thankful nga at some point, nagmeet atong minds and attitudes because you’ve become one of the amazing friendships I’ve found, cultivated, and nurtured. 🥹💗</p>
+        <p class="caption">This picture reminds me of how you’re such a BDO friend. You really find ways to make things happen jud. Bisan gihubak na, nidagan jud ka og 26 kilometers back and forth para lang… HAHAHAHAHAHAHA. GIRL, THE DEDICATION. 😭😂</p>
+        <button class="next-button" type="button" data-next>Continue to next level →</button>
+      </div>
+    </section>
+
+    <section id="level-2" class="screen level-screen" data-level-screen="2" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">LEVEL 2 OF 7</p>
+      <h2>A Little Discovery</h2>
+      <div class="quiz">
+        <h3>Keep going. One answer brings you closer to the next reveal.</h3>
+        <p class="question-text">What helps us discover something new?</p>
+        <div class="answer-list">
+          <button class="answer-button" type="button" data-answer="A">A. Never asking questions</button>
+          <button class="answer-button" type="button" data-answer="B">B. Being curious</button>
+          <button class="answer-button" type="button" data-answer="C">C. Ignoring everything</button>
+          <button class="answer-button" type="button" data-answer="D">D. Rushing without looking</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="reveal-content" hidden>
+        <img src="picture/2.jpg" alt="2 picture">
+        <p class="caption">Eyyyy, us in our mini-rebellion era huhuhuhuhahahaha! Na para bang mga milyonarya makaasta tawn uy. 😭😂 I really enjoyed our samgyupsal dates and all the outfit ganaps natin. I appreciate how you dress me up and style me, from choosing the clothes to doing my makeup, kahit pareho ra ta walay alamag. HAHAHAHAHA. 😭💗</p>
+        <p class="caption">Know that I’ll always be here for all your dramas, laags, and kantas. May you always find the courage to listen to your own voice, especially on the days when you doubt yourself. I hope it reaches the deepest parts of you and reminds you that you are enough and that you are doing enough. You don’t always have to do more to prove your worth. Sometimes, you just have to pause, breathe, and give yourself the same grace you so freely give to others.</p>
+        <button class="next-button" type="button" data-next>Continue to next level →</button>
+      </div>
+    </section>
+
+    <section id="level-3" class="screen level-screen" data-level-screen="3" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">LEVEL 3 OF 7</p>
+      <h2>The Challenge</h2>
+      <div class="quiz">
+        <h3>Not every step is easy, but every challenge can teach us something.</h3>
+        <p class="question-text">When something feels difficult, what is a helpful response?</p>
+        <div class="answer-list">
+          <button class="answer-button" type="button" data-answer="A">A. Try a strategy and keep learning.</button>
+          <button class="answer-button" type="button" data-answer="B">B. Quit immediately.</button>
+          <button class="answer-button" type="button" data-answer="C">C. Blame everyone else.</button>
+          <button class="answer-button" type="button" data-answer="D">D. Pretend it never happened.</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="reveal-content" hidden>
+        <img src="picture/3.jpg" alt="3 picture">
+        <p class="caption">You may not always be my go-to person sa laag kay lisod man ka hagiton, especially if layo HAHAHAHAHA, but I appreciate every time mukuyog ka, and ikaw pa jud usahay ang muuna og hagad. 😭😂 Because of you, nahimo na sad kong Move It person. HAHAHAHAHA.</p>
+        <p class="caption">Thank you for bringing me to places I’ve never been to, for guiding me through places I don’t know, and for all the experiences I get to have because of our laags. I love how these little adventures allow me to discover new places and experience things I probably wouldn’t have tried on my own. Here’s to more spontaneous laag plans, new places to explore, and memories to look back on. 💗</p>
+        <button class="next-button" type="button" data-next>Continue to next level →</button>
+      </div>
+    </section>
+
+    <section id="level-4" class="screen level-screen" data-level-screen="4" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">LEVEL 4 OF 7</p>
+      <h2>The People Along the Way</h2>
+      <div class="quiz">
+        <h3>Some moments become special because of the people who share them with us.</h3>
+        <p class="question-text">What helps a team or friendship grow stronger?</p>
+        <div class="answer-list">
+          <button class="answer-button" type="button" data-answer="A">A. Keeping every idea to yourself.</button>
+          <button class="answer-button" type="button" data-answer="B">B. Refusing to communicate.</button>
+          <button class="answer-button" type="button" data-answer="C">C. Competing all the time.</button>
+          <button class="answer-button" type="button" data-answer="D">D. Listening and supporting one another.</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="reveal-content" hidden>
+        <img src="picture/4.jpg" alt="4 picture">
+        <p class="caption">Anjo World girlies! Sino ka diyan nga kita naman ang mamirma sa mga MOA ron? HAHAHAHAHAHAHA. 😭✍️
+        <p class="caption">Continue to face your fears coz every step you take brings you closer to better and bigger opportunities. The heights may seem scary at first, but sometimes, they’re only frightening because we haven’t experienced them yet. So take the leap, even when your knees are shaking. You don’t have to have everything figured out before you begin. And if you ever fall, know that I’ll always be here, arms extended, ready to help you get back up. I’ll be your #1 supporter through and through, cheering you on in every little and big victory. Always remember that you’re capable of more than you think. Padayon, Nikkiiiii! 💗🥹</p>
+        <button class="next-button" type="button" data-next>Continue to next level →</button>
+      </div>
+    </section>
+
+    <section id="level-5" class="screen level-screen" data-level-screen="5" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">LEVEL 5 OF 7</p>
+      <h2>A Moment to Remember</h2>
+      <div class="quiz">
+        <h3>Pause for a moment and unlock another snapshot along the way.</h3>
+        <p class="question-text">What is one good way to preserve a meaningful moment?</p>
+        <div class="answer-list">
+          <button class="answer-button" type="button" data-answer="A">A. Dismiss it.</button>
+          <button class="answer-button" type="button" data-answer="B">B. Wait for someone else to remember.</button>
+          <button class="answer-button" type="button" data-answer="C">C. Notice and reflect on it.</button>
+          <button class="answer-button" type="button" data-answer="D">D. Never talk about it.</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="reveal-content" hidden>
+        <img src="picture/5.jpg" alt="5 picture">
+        <p class="caption">Hands down to your faith, Nikki💗. I admire how you continue to hold on to God, even when things don’t always make sense or when the answers you seek take time to come. May you never lose that faith, that quiet assurance that He is working even in the moments when you cannot see it. Continue to trust His timing, even when it differs from yours, and remember that delays do not mean denials. I hope you always find comfort in knowing that you don’t have to carry everything on your own. May God continue to guide your steps, give you peace in moments of uncertainty, and remind you of His goodness in every season of your life. And when your faith feels a little shaky, I hope you remember how far He has brought you. Keep knowing, loving, and serving Him in your own beautiful way. I’m always rooting for you, and praying that you continue to grow not only in the things you do but also in the person God is shaping you to become.</p>
+        <button class="next-button" type="button" data-next>Continue to next level →</button>
+      </div>
+    </section>
+
+    <section id="level-6" class="screen level-screen" data-level-screen="6" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">LEVEL 6 OF 7</p>
+      <h2>Almost There</h2>
+      <div class="quiz">
+        <h3>You have made it through six steps. One last answer before the finale.</h3>
+        <p class="question-text">What makes a journey worth celebrating?</p>
+        <div class="answer-list">
+          <button class="answer-button" type="button" data-answer="A">A. The destination.</button>
+          <button class="answer-button" type="button" data-answer="B">B. The learning, people, and moments along the way.</button>
+          <button class="answer-button" type="button" data-answer="C">C. Never making mistakes.</button>
+          <button class="answer-button" type="button" data-answer="D">D. Doing everything alone.</button>
+        </div>
+        <p class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="reveal-content" hidden>
+        <img src="picture/6.jpg" alt="6 picture">
+        <p class="caption">You were tested, and you prevailed. 🥹🤍 And knowing you, I know it wasn’t always easy. I’ve seen how much you strive, how deeply you care, and how you keep showing up even when things get difficult. I hope you never forget how far you’ve come and how much you’ve overcome. Keep holding on to your faith, Nikki. Trust that God knows the desires of your heart and is guiding you even when the path ahead seems uncertain. And whenever you start doubting yourself, remember that you don’t have to face everything alone. I’ll always be here to remind you of what you’re capable of and cheer you on, every step of the way. Always proud of you! 💗</p>
+        <button class="next-button" type="button" data-next>Continue to final level →</button>
+      </div>
+    </section>
+
+    <section id="level-7" class="screen level-screen final-level" data-level-screen="7" hidden>
+      <button class="back-button" type="button" data-back>← Back to map</button>
+      <p class="eyebrow">THE FINAL LEVEL</p>
+      <h2>Are You Ready?</h2>
+      <button id="boom-button" class="boom-button" type="button">1, 2, 3… BOOM!</button>
+      <div id="final-reveal" class="reveal-content" hidden>
+        <video controls preload="metadata">
+          <source src="picture/video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <p class="caption">Hi, birthday girl! HAHAHAHAHAHA! My apologies for greeting you late kay nabusy ang ferson sa laag nato nya namatay pag-uli. HAHAHAHA natug na lang. Nya ni-absent man daghan by Monday, so wa na naapas. Naunahan na nuon ko ni Kristian. HAHAHAHAHAHAHA 😭</p>
+        <p class="caption">Know that I am one of the happiest people for the good news you’ve received. I’m genuinely happy for you, but at the same time, medyo sad sad pud kay wala na tay mga “Miss, naa na ka sa school? Nakabook na ka?” and “Miss, kaon na ta” moments. HAHAHAHA. I’ll definitely miss those little routines, but I know our friendship isn’t so shallow nga di na ta mag-istorya just because we’ll be in different institutions. Duhhh, ka-duol ra baya sa inyoha! I-invite sab ko if naay kaon, ha? Especially if wala kay kuyog. HAHAHAHAHAHA. 😭💗</p>
+        <p class="caption">I hope you find the strength and courage to face every challenge and new endeavor that comes your way. I know there will be days when things feel overwhelming, but I hope you never forget how capable you are and how much you’ve already overcome. Keep trusting yourself, your timing, and God’s plans for you. I may not be there to witness your everyday wins anymore, but please know that I’ll always be rooting for you wholeheartedly. Different institutions, same friendship. Always proud of you, birthday girl! 🥹💗</p>
+        <p class="caption">P.S. Know that confidence looks good on you! 😊</p>
+      </div>
+    </section>
+  </main>
+
+  <audio id="backgroundMusic" loop>
+  <source src="picture/music.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+
+</body>
+</html>
